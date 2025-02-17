@@ -59,7 +59,7 @@ Class will have additional state and methods, but those will be used for impleme
 
 
 
-#2 Modular Arithmetic
+##############################2 Modular Arithmetic
 Project 2:
 
 → create a class, called Mod
