@@ -1,4 +1,4 @@
-# TimeZone-BankAccount
+#1 TimeZone-BankAccount
 Project 1: Design and implement a class that will be used to represent bank accounts.
 We want the following functionality and characteristics:
 - accounts are uniquely identified by an **account number** (assume it will just be passed in the initializer)
@@ -56,3 +56,39 @@ My approach will end up creating two classes: a `TimeZone` class used to store t
 - parse confirmation code
 
 Class will have additional state and methods, but those will be used for implementation.
+
+
+
+#2 Modular Arithmetic
+Project 2:
+
+→ create a class, called Mod
+
+→ initialize with value and modulus arguments
+    → ensure modulus and value are both integers
+    → moreover, modulus should be positive
+        should be read-only
+
+→ store the value as the residue
+    i.e. if value = 8 and modulus = 3, store value as 2 ( 8 % 3 )
+
+→ implement congruence for the == operator
+    → allow comparison of a Mod object to an int (in which case use the residue of the int)
+    → allow comparison of two Mod objects only if they have the same modulus
+    → ensure objects remain hashable
+
+→ provide an implementation so that int(mod_object) will return the residue
+
+→ provide a proper representation (repr)
+
+→ implement the operators: +, -, *, **
+    → support other operand to be Mod (with same modulus only)
+    → support other operand to be an integer (and use the same modulus)
+    → always return a Mod instance
+
+        perform the +, -, *, ** operations on the values (so there's nothing complicated here)
+        i.e. Mod(2, 3) + 16 → Mod(2 + 16, 3) → Mod(0, 3)
+
+→ implement the corresponding in-place arithmetic operators
+
+→ implement ordering (makes sense since we are comparing residues)
